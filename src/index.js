@@ -99,9 +99,9 @@ class MediaQuery extends React.Component {
 
   render = () => {
     if (typeof this.props.children === 'function') {
-      return this.props.children(this.state.matches)
+      return (<div>{this.props.children(this.state.matches)}</div>)
     }
-    return this.state.matches ? this.props.children : null
+    return this.state.matches ? (<div>{this.props.children}</div>) : null
   }
 }
 
